@@ -6,3 +6,8 @@ git config --global color.ui auto
 
 git commit -a -> fait également le "add" (n'ajoute pas les nouveaux fichiers)
 git commit -n "Message"
+
+git log -p -> affiche les commits
+git log --stat --summary -> résumé
+git log --oneline
+
