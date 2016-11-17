@@ -1,0 +1,8 @@
+
+
+git config --global user.name "Sami Lefebvre"
+git config --global user.email "sami.lefebvre@gmail.com"
+git config --global color.ui auto
+
+git commit -a -> fait également le "add" (n'ajoute pas les nouveaux fichiers)
+git commit -n "Message"
