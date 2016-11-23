@@ -56,3 +56,8 @@ Différentes branches de développement.
 git branch experimental -> nouvelle branche
 git branch : liste les branches
 git checkout experimental : change de branche
+
+git merge experimental : fusionner /!\ possibilité de conflits
+				       git diff pour les voir
+gitk --all -> gitk avec toutes les branches
+git branch -d <branche> -> supprime la branche
