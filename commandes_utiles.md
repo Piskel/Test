@@ -34,3 +34,25 @@ git push -> eregistrer ses commits sur le serveur
 git fetch -> récupérer les commits depuis le serveur
 git pull -> fetch + merge
 
+
+**** Stash ****
+
+Brouillon : enregistre les modifs non enregistrées pour y revenir plus tard.
+	    C'est une pile.
+
+git stash -> enregistre dans stash
+git stash show
+git stash list
+git stash pop
+git stash drop
+
+
+**** Les branches ****
+
+Différentes branches de développement.
+(branche expérimentale, ou chacun sa branche, branche pour corriger des bugs
+(1.1)
+
+git branch experimental -> nouvelle branche
+git branch : liste les branches
+git checkout experimental : change de branche
