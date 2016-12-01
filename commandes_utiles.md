@@ -21,6 +21,8 @@ git mv -> Pour git, un déplacement est un suppression puis un ajout
 git commit -a -> fait également le "add" (n'ajoute pas les nouveaux fichiers)
 git commit -n "Message"
 
+git show
+
 git status
 
 git log -p -> affiche les commits
@@ -61,3 +63,25 @@ git merge experimental : fusionner /!\ possibilité de conflits
 				       git diff pour les voir
 gitk --all -> gitk avec toutes les branches
 git branch -d <branche> -> supprime la branche
+
+
+**** Désigner un commit ****
+
+- identifiant (éventuellement abrégé) ex : 45ef456
+	ex : $ git show <identifiant>
+
+- nom de branche : dernier commit de la branche
+	ex : $ git show experimental
+
+- HEAD : dernier commit de la branch ecourante
+	ex : $ git show HEAD
+
+- commit ^ : parent du commit donné
+	ex : $ git show HEAD^ (avant-dernier commit)
+	     $ git show HEAD^^ (avant-avant-dernier commit
+	     $ git show HEAD~4 (= HEAD^^^^)
+
+- Si plusieurs parents :
+	par défaut, le premier parent est affiché
+	commit^1 : le premier parent
+	commit^2 : le deuxième parent
