@@ -99,3 +99,23 @@ $ git diff v2.5 HEAD
 $ git log v2.5..v2.6
 $ git log v2.5..
 $ git log v2.5.. makefile
+
+
+**** Autres commandes utiles ****
+
+- Rechercher des lignes, recherche dans le dépôt :
+	$ git grep "motif" (expr. rationnelle)
+	$ git grep "motif" v2.5 (ou tout autre commit)
+
+- Retrouver qui a modifié les lignes d'un fichier :
+	$ git blame fichier
+
+- Retrouver le commit à l'origine d'un problème :
+	$ git bisect
+	$ git bisect start (pour commencer)
+	$ git bisect good v0.2 (la version 0.2 ne contient pas le bug)
+	$ git bisect bad (le dernier commit a le bug)
+	=> git va extraire une version intermédiaire
+	   Il faut tester et répondre :
+		$ git bisect good OU
+		$ git bisect bad
