@@ -85,3 +85,17 @@ git branch -d <branche> -> supprime la branche
 	par défaut, le premier parent est affiché
 	commit^1 : le premier parent
 	commit^2 : le deuxième parent
+
+
+**** Étiqueter un commit ****
+
+git tag
+
+ex : $ git tag v2.5 2af3728
+
+Ce nom peut ensuite être utilisé :
+$ git show v2.5
+$ git diff v2.5 HEAD
+$ git log v2.5..v2.6
+$ git log v2.5..
+$ git log v2.5.. makefile
