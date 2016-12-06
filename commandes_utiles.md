@@ -118,4 +118,15 @@ $ git log v2.5.. makefile
 	=> git va extraire une version intermédiaire
 	   Il faut tester et répondre :
 		$ git bisect good OU
-		$ git bisect bad
+		$ git bisect bad  OU
+		$ git bisect skip		
+
+	$ git bisect reset pour arrêter
+
+
+**** Faire des commits "propres" ****
+
+- Sélectionner ce que l'on met dans un commit :
+	$ git add -p [fichiers] -> on va pouvoir choisir interactivement parmi
+				   les modifications ce que sera intégré ds le
+				   commit.
