@@ -127,6 +127,19 @@ $ git log v2.5.. makefile
 **** Faire des commits "propres" ****
 
 - Sélectionner ce que l'on met dans un commit :
+	
 	$ git add -p [fichiers] -> on va pouvoir choisir interactivement parmi
 				   les modifications ce que sera intégré ds le
 				   commit.
+
+	réponses : (y)yes, (n)no, (s)split, (q)quit, (a)all, (e)edit...
+
+	Utile pour enregistrer un commit en deux fois (pour faire des commits
+	intermédiaires.
+
+
+- /!\  Modifier le dernier commit :
+
+	$ git commit --amend   -> le dernier commit est remplacé
+
+	/!\ à éviter si les commits ont déjà été partagés
