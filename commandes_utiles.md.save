@@ -123,43 +123,6 @@ $ git log v2.5.. makefile
 
 	$ git bisect reset pour arrêter
 
+**** Annuler uun commit ****
 
-**** Faire des commits "propres" ****
-
-- Sélectionner ce que l'on met dans un commit :
-	
-	$ git add -p [fichiers] -> on va pouvoir choisir interactivement parmi
-				   les modifications ce que sera intégré ds le
-				   commit.
-
-	réponses : (y)yes, (n)no, (s)split, (q)quit, (a)all, (e)edit...
-
-	Utile pour enregistrer un commit en deux fois (pour faire des commits
-	intermédiaires.
-
-
-- /!\  Modifier le dernier commit :
-
-	$ git commit --amend   -> le dernier commit est remplacé
-
-	/!\ à éviter si les commits ont déjà été partagés
-
-
-- /!\  Supprimer des commits :
-	
-	$ git reste [mode] <commit>
-
-	-> le sommet de la branche courante est réinitialisé au commit donné
-	   mode : --soft            : seul le dépôt est réinitialisé
-		  --mixed [default] : dépôt + index
-		  --hard	    : dépôt, index et fichiers
-	
-	exemple : $ git reset --soft HEAD^
-	On peut refaire le commit avec  : git commit
-
-	$ git reset --hard HEAD~3 -> supprime les trois derniers commits (arg)
-
-
-- Éviter les "merge" lors d'un pull (pour ne pas avoir des branches de partout)
-				    (et avoir une histoire plus linéaire)
-	$ git pull --rebase
+$ git revert <commit> : créer un commit inverse au commit <commit>
